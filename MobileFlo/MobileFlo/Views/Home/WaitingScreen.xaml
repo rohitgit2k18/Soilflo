@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MobileFlo.Views.Home.WaitingScreen"
+             BackgroundImage="bg.png">
+     <ContentPage.Content>
+        <Grid x:Name="Rootlayout" RowSpacing="0">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.10*"/>
+                <RowDefinition Height="0.20*"/>
+                <RowDefinition Height="0.15*"/>
+                <RowDefinition Height="0.30*"/>
+                <RowDefinition Height="0.25*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#C25312" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>    
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" BackgroundColor="Transparent" Padding="3">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                        <Label Text="Do not begin trip until status" FontSize="Medium"
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                         <Label Text="changes to Hauling" HorizontalOptions="CenterAndExpand" FontSize="Medium"
+                   VerticalOptions="Center" TextColor="White"/>
+                        
+                    </StackLayout>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="200" Source="logo.png"/>
+            </Grid>
+            <Grid Grid.Row="2" BackgroundColor="#FFFF01" Padding="20" HorizontalOptions="FillAndExpand">
+                <Label Text="STATUS WAITING" FontSize="Large" FontAttributes="Bold"
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+            </Grid>
+            <Grid Grid.Row="3" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" Padding="10">
+                  <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                  </Grid.RowDefinitions>
+                  <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                              <ColumnDefinition Width="Auto"/>
+                              <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                              <Grid Grid.Column="0">
+                                    <Label Text="Project :" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" FontSize="Small" TextColor="Black"/>
+                              </Grid>
+                              <Grid Grid.Column="1">
+                                    <Label Text="{Binding ProjectName}" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" FontSize="Small" TextColor="Gray"/>
+                              </Grid>
+                  </Grid>
+                  <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                              <ColumnDefinition Width="Auto"/>
+                              <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                              <Grid Grid.Column="0">
+                                    <Label Text="License Policy :" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" FontSize="Small" TextColor="Black"/>
+                              </Grid>
+                              <Grid Grid.Column="1">
+                                    <Label Text="{Binding LicensePlate}" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" FontSize="Small"  TextColor="Black"/>
+                              </Grid>
+                  </Grid>
+                <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                              <ColumnDefinition Width="Auto"/>
+                              <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                              <Grid Grid.Column="0">
+                                    <Label Text="GPS :" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" FontSize="Small" TextColor="Black"/>
+                              </Grid>
+                              <Grid Grid.Column="1" Padding="0,0,0,10">
+                                    <Image x:Name="ImageTick" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="20"/>
+                              </Grid>
+                  </Grid>
+            </Grid>
+         
+            <Grid Grid.Row="4" BackgroundColor="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" BackgroundColor="Transparent" Padding="30,0,30,0">
+                    <Button VerticalOptions="Center" 
+                            HorizontalOptions="FillAndExpand" 
+                            Text="VIEW INVOICES"
+                            TextColor="White"
+                            BackgroundColor="#022648" 
+                            Clicked="ViewInvoice_Clicked"/>
+                </Grid>
+                <Grid Grid.Row="1" Padding="20,0,20,10" BackgroundColor="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" BackgroundColor="Transparent">
+                        
+                    </Grid>
+                    <Grid Grid.Column="1" BackgroundColor="Transparent" Padding="0,0,10,0">
+                        <Image VerticalOptions="Center" HorizontalOptions="EndAndExpand" WidthRequest="50" Source="info.png"/>
+                        <Image.GestureRecognizers>
+                                      <TapGestureRecognizer x:Name="XFFaqClickHere" NumberOfTapsRequired="1" Tapped="XFFaqClickHere_Tapped"/> 
+                        </Image.GestureRecognizers>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <ActivityIndicator IsVisible="false" Color="#00264F" VerticalOptions="Center" HorizontalOptions="Center" IsRunning="true" x:Name="XFActIndicatorLoader"/>
+        </Grid>
+        
+    </ContentPage.Content>
+
+</ContentPage>

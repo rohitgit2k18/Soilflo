@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFlo.Views.Home.QRCodeSucessPage"
+             BackgroundColor="#F8F8F5">
+    <ContentPage.Content>
+        <Grid x:Name="RootLayout" Margin="20" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".20*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height=".20*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                    <Image Source="success.png" HorizontalOptions="Center"/>
+                    <Label Text="SUCCESS!" HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" TextColor="#3E6C88" 
+                           FontAttributes="None"
+                           FontSize="Large" />
+                </StackLayout>
+            </Grid>
+             <Grid Grid.Row="2">
+                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">                    
+                    <Label Text="You are now hauling on the following project." HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" TextColor="Black" 
+                          
+                           FontSize="Small" />
+                    <Label Text="Eglinton Crosstown." HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" TextColor="#F45200" 
+                          
+                           FontSize="Small" />
+                    
+                    <Button HorizontalOptions="Center" Text="CONTINUE"
+                            Margin="0,10,0,0"
+                            Padding="20,0,20,0"
+                            FontSize="Medium"
+                            BackgroundColor="#F45200"
+                            BorderRadius="10"
+                            CornerRadius="10"
+                            TextColor="White"
+                            Clicked="Continue_Clicked"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

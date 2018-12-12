@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFlo.Views.Home.FAQPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+        <Grid x:Name="RootLayout" Margin="30">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" RowSpacing="5" BackgroundColor="Transparent">
+             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+             </Grid.RowDefinitions> 
+            <Grid Grid.Row="0" RowSpacing="2" BackgroundColor="Transparent">    
+                <Label Text="1. Why do I have to use this app?" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="SoilFLO Hauler App replaces paper tickets. It ensures that you are paid accurately and on-time for your hauling and standby time." HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="5" BackgroundColor="Transparent">
+             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                
+             </Grid.RowDefinitions> 
+            <Grid Grid.Row="0" RowSpacing="2" BackgroundColor="Transparent">    
+                <Label Text="2. What do I need to do?" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="In order to ensure that the app records a complete list and timing of your trips, you must:" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+            <Grid Grid.Row="2" RowSpacing="2" BackgroundColor="Transparent">    
+                <Label Text="- Keep the application running in the background while you are hauling and waiting at the site" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+            <Grid Grid.Row="3" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="- Keep your GPS on " HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+            <Grid Grid.Row="4" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="If your device or GPS are off for an extended period of time then you risk not being paid accurately for your hauling." HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+               
+            </Grid>
+            <Grid Grid.Row="2" RowSpacing="5" BackgroundColor="Transparent">
+                     <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                
+             </Grid.RowDefinitions> 
+            <Grid Grid.Row="0" RowSpacing="2" BackgroundColor="Transparent">    
+                <Label Text="3. How does the app work?" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="- The site foreman generates a QR code every morning" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+            <Grid Grid.Row="2" RowSpacing="2" BackgroundColor="Transparent">    
+                <Label Text="- You click 'Start Hauling' and scan the QR code" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+            <Grid Grid.Row="3" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="- The site foreman clicks 'Dispatch' on his SoilFLO app when you are ready to leave the site with material " HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+            <Grid Grid.Row="4" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="- The site foreman clicks 'Dispatch' on his SoilFLO app when you are ready to leave the site with material" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+               
+                
+            </Grid>
+            <Grid Grid.Row="3" RowSpacing="5" BackgroundColor="Transparent">
+             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+             </Grid.RowDefinitions> 
+            <Grid Grid.Row="0" RowSpacing="2" BackgroundColor="Transparent">    
+                <Label Text="4. How does the app know when I am on standby?" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="There is a timer in the app that keeps track of your idle time on-site. Please ensure that the app is always running so that there are no issues with the total daily standby time." HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+                    
+                
+            </Grid>
+            <Grid Grid.Row="4" RowSpacing="5" BackgroundColor="Transparent">
+             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+             </Grid.RowDefinitions> 
+            <Grid Grid.Row="0" RowSpacing="2" BackgroundColor="Transparent">    
+                <Label Text="5. How much data does this app use?" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="The app uses very little data per month, likely less than 100mb." HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+                    
+               
+            </Grid>
+            <Grid Grid.Row="5" RowSpacing="5" BackgroundColor="Transparent">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+             </Grid.RowDefinitions> 
+            <Grid Grid.Row="0" RowSpacing="2" BackgroundColor="Transparent">    
+                <Label Text="6. What if my camera is broken?" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="If your camera is broken, tell the foreman so that he can provide you with the manual daily code." HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+               
+            </Grid>
+            <Grid Grid.Row="6" RowSpacing="5" BackgroundColor="Transparent">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+             </Grid.RowDefinitions> 
+            <Grid Grid.Row="0" RowSpacing="2" BackgroundColor="Transparent">    
+                <Label Text="7. How do I see my past trips?" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="Click the 'My Invoices' button to view your past trips. The site foreman and your dispatcher can also see these trips." HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+               
+            </Grid>
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

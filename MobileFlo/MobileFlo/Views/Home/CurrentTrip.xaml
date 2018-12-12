@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MobileFlo.Views.Home.CurrentTrip"
+             BackgroundImage="bg.png">
+    <ContentPage.Content>
+        <Grid x:Name="Rootlayout" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.15*"/>
+                <RowDefinition Height="0.60*"/>
+                <RowDefinition Height="0.25*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#4AC189" HorizontalOptions="FillAndExpand">
+                <Label x:Name="XFLabelCurrentTrip" Text= "STATUS - HAULING" FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+            </Grid>
+            <Grid Grid.Row="1" BackgroundColor="#F8F8F8" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Padding="10,20,10,20">
+                    <Image VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="200" Source="destination.png"/>
+                </Grid>
+                <Grid Grid.Row="1" BackgroundColor="Transparent" Padding="0,20,0,0">
+                    <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                        <Label Text="DESTINATION" FontSize="Small"
+                   VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+                         <Label x:Name="XFDestinationLbl" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontSize="Small"
+                   VerticalOptions="CenterAndExpand" TextColor="#022648"/>
+                        
+                    </StackLayout>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2" BackgroundColor="#F8F8F8" Padding="0,0,0,10" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" BackgroundColor="Transparent" Padding="30,0,30,0">
+                    <Button VerticalOptions="Center" 
+                            HorizontalOptions="FillAndExpand" 
+                            Text="Open Map"
+                            TextColor="White"
+                            BackgroundColor="#022648"
+                            Clicked="OpenMap_Clicked"/>
+                </Grid>
+                <Grid Grid.Row="1" Padding="30,0,30,10" BackgroundColor="Transparent">
+                   <Button VerticalOptions="Center" 
+                            HorizontalOptions="FillAndExpand" 
+                            Text="Click Here For Load Info."
+                            TextColor="White"
+                            BackgroundColor="#454443"
+                            Clicked="XFLoadInformation_Click"/>
+                </Grid>
+            </Grid>
+             <ActivityIndicator IsVisible="false" Color="#00264F" VerticalOptions="Center" HorizontalOptions="Center" IsRunning="true" x:Name="XFActIndicatorLoader"/>
+         </Grid>
+    </ContentPage.Content>
+</ContentPage>

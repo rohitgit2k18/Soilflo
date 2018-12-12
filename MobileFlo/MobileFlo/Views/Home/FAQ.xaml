@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MobileFlo.Views.Home.FAQ"
+             BackgroundColor="White">
+        <ContentPage.Content>
+        <Grid x:Name="RootLayout" Padding="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+           
+            <Grid Grid.Row="0" BackgroundColor="#00264F">
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
+                 </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Image Source="back_arrow.png" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image.GestureRecognizers>
+                                      <TapGestureRecognizer x:Name="XFBackbtn"
+                                                            NumberOfTapsRequired="1" 
+                                                            Tapped="XFBackbtn_Tapped"/> 
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label Text="APP INFORMATION" HorizontalOptions="Center" VerticalOptions="Center" Margin="-80,0,0,0"
+                           HorizontalTextAlignment="Center" TextColor="#3E6C88" 
+                           FontAttributes="None"
+                           FontSize="Medium" />
+                </Grid>
+            </Grid>
+            
+            <Grid Grid.Row="1" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>    
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" ColumnSpacing="2" BackgroundColor="Transparent">
+                    <Button x:Name="XFBtnFAQ" Text="FAQS" BackgroundColor="#D0550D" Clicked="XFFAQBtn_Click" IsEnabled="true" TextColor="White" FontSize="Small"/>
+                    
+                </Grid>
+                <Grid Grid.Column="1" ColumnSpacing="2" BackgroundColor="Transparent">
+                    
+                    <Button x:Name="XFBtnAboutUs" Text="ABOUT US" BackgroundColor="#2E2E2E" Clicked="XFAboutUs_Click" FontSize="Small" TextColor="White"/>
+                    
+                </Grid> 
+                <Grid Grid.Column="2" ColumnSpacing="2" BackgroundColor="Transparent">
+                    
+                    <Button x:Name="XFBtnTnC" Text="LEGAL" BackgroundColor="#2E2E2E" Clicked="XFTnC_Click" FontSize="Small" TextColor="White"/>
+                </Grid> 
+            </Grid>
+          
+            <ContentView x:Name="MainView" Grid.Row="2" BackgroundColor="Transparent">
+                
+            </ContentView>
+                
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

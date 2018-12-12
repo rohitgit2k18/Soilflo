@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFlo.Views.Home.InvoiceInnerPage"
+             BackgroundImage="bg.png">
+    <ContentPage.Content>
+        <Grid x:Name="RootLayout" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#00264F">
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
+                 </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Image Source="back_arrow.png" HorizontalOptions="Center" VerticalOptions="Center">
+                         <Image.GestureRecognizers>
+                                      <TapGestureRecognizer x:Name="XFBackbtn"
+                                                            NumberOfTapsRequired="1" 
+                                                            Tapped="XFBackbtn_Tapped"/> 
+                        </Image.GestureRecognizers>
+                        </Image>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label Text="DETAILS" HorizontalOptions="Center" VerticalOptions="Center" Margin="-80,0,0,0"
+                           HorizontalTextAlignment="Center" TextColor="#3E6C88" 
+                           FontAttributes="None"
+                           FontSize="Medium" />
+                </Grid>
+            </Grid>
+                 <ListView x:Name="InnerVoiceList" Grid.Row="1" Margin="10,10,10,0" HasUnevenRows="True" SeparatorColor="Transparent" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                            <Grid x:Name="mainlayout" Margin="0,5,0,5">                          
+                                <Frame HasShadow="true"  Padding="20" BackgroundColor="White"  HeightRequest="-1" CornerRadius="5">
+                                    <Grid BackgroundColor="White">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="0" ColumnSpacing="2">
+                                            <Grid.ColumnDefinitions>
+                                                     <ColumnDefinition Width="*"/>
+                                                     <ColumnDefinition Width="1.5*"/>
+                                            </Grid.ColumnDefinitions>
+                                           <Grid Grid.Column="0"  BackgroundColor="Transparent">
+                                                   <Label Text="Project:" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="Small"/>
+                    
+                                           </Grid>
+                                           <Grid Grid.Column="1" BackgroundColor="Transparent">
+                    
+                                                   <Label Text="{Binding Project}" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="Small"/>
+                    
+                                           </Grid> 
+                                        </Grid>
+                                        <Grid Grid.Row="1" ColumnSpacing="2">
+                                            <Grid.ColumnDefinitions>
+                                                     <ColumnDefinition Width="*"/>
+                                                     <ColumnDefinition Width="1.5*"/>
+                                            </Grid.ColumnDefinitions>
+                                           <Grid Grid.Column="0" BackgroundColor="Transparent">
+                                                   <Label Text="Trip Number:" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="Small"/>
+                    
+                                           </Grid>
+                                           <Grid Grid.Column="1" BackgroundColor="Transparent">
+                    
+                                                   <Label Text="{Binding NumberofTrips}" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="Small"/>
+                    
+                                           </Grid> 
+                                        </Grid>
+
+                                        <Grid Grid.Row="2" ColumnSpacing="2">
+                                           <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                     <ColumnDefinition Width="1.5*"/>
+                                            </Grid.ColumnDefinitions>
+                                           <Grid Grid.Column="0" BackgroundColor="Transparent">
+                                                   <Label Text="Start Date:" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="Small"/>
+                    
+                                           </Grid>
+                                           <Grid Grid.Column="1" BackgroundColor="Transparent">
+                    
+                                                   <Label Text="{Binding StartTime}" VerticalOptions="Start" HorizontalOptions="Start" FontAttributes="Bold" TextColor="Black" FontSize="Small"/>
+                    
+                                           </Grid> 
+                                        </Grid>
+                                    </Grid>
+                                </Frame>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+       
+    </ContentPage.Content>
+</ContentPage>

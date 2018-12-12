@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFlo.Views.Account.RegisterScreenThird"
+             BackgroundImage="bg.png">
+    <ContentPage.Content>
+        <Grid x:Name="RootLayout" Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="Transparent">
+                <Image VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="200" Source="logo.png"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="5" BackgroundColor="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Padding="0,0,0,10">
+                    <Label Text="WHAT'S YOUR NAME?"
+                           TextColor="#304C69" 
+                           FontSize="Small"
+                           HorizontalOptions="Center"                         
+                           HorizontalTextAlignment="Center"  />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Frame BorderColor="#A5A3A1" HeightRequest="50" Margin="0" Padding="5" CornerRadius="0">
+                        <Grid x:Name="GridEntryAndCode" HeightRequest="50">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Entry x:Name="XFFirstName" Text="{Binding firstname}" Placeholder="First Name" PlaceholderColor="#5F5F5F"/>
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                    
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Frame BorderColor="#A5A3A1" HeightRequest="50" Margin="0" Padding="5" CornerRadius="0">
+                        <Grid x:Name="GridEnt" HeightRequest="50">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Entry x:Name="XFLastName" Text="{Binding lastname}" Placeholder="Last Name" PlaceholderColor="#5F5F5F"/>
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                </Grid>
+                <Grid Grid.Row="3" Padding="0,30,0,10">
+                    <Button VerticalOptions="Center" 
+                            HorizontalOptions="FillAndExpand" 
+                            CornerRadius="0" 
+                            Text="CONTINUE"
+                            TextColor="White"
+                            BackgroundColor="#494949"
+                            BorderRadius="0"
+                            x:Name="XFBtnContinue"
+                            Clicked="XFBtnContinue_Clicked"/>
+                </Grid>
+                
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

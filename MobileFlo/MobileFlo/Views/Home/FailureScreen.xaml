@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MobileFlo.Views.Home.FailureScreen"
+             BackgroundColor="#F8F8F5">
+    <ContentPage.Content>
+        <Grid x:Name="RootLayout" Margin="20" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".20*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height=".20*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                    <Image Source="failed_screen.png" HorizontalOptions="Center"/>
+                    <Label Text="CODE INVALID!" HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" TextColor="#3E6C88" 
+                           FontAttributes="None"
+                           FontSize="Large" />
+                </StackLayout>
+            </Grid>
+             <Grid Grid.Row="2">
+                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">                    
+                    <Label Text="Please ensure that you have entered the" HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" TextColor="Black" 
+                          
+                           FontSize="Small" />
+                    <Label Text="right code." HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" TextColor="Black" 
+                          
+                           FontSize="Small" />
+                    
+                    <Button HorizontalOptions="Center" Text="RETURN"
+                            Margin="0,10,0,0"
+                            Padding="20,0,20,0"
+                            FontSize="Medium"
+                            BackgroundColor="#3E6C88"
+                            BorderRadius="10"
+                            CornerRadius="10"
+                            TextColor="White"
+                            Clicked="XFReturn_Clicked"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

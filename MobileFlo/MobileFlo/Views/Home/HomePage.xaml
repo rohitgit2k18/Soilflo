@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MobileFlo"
+             x:Class="MobileFlo.Views.Home.HomePage"
+             BackgroundImage="bg.png">
+    <ContentPage.Content>
+        <Grid x:Name="Rootlayout" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition Height="0.50*"/>
+                <RowDefinition Height="0.25*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="Transparent">
+                <Image VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="200" Source="logo.png"/>
+            </Grid>
+            <Grid Grid.Row="1" BackgroundColor="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Padding="10">
+                    <Button WidthRequest="150" HeightRequest="150"
+                            x:Name="XFBTNHauling"
+                            VerticalOptions="StartAndExpand"
+                            HorizontalOptions="CenterAndExpand" 
+                            BorderRadius="75" 
+                            CornerRadius="75"
+                            BorderWidth="2"
+                            TextColor="White"
+                            Text="START HAULING" FontSize="Medium"
+                            BorderColor="Transparent" 
+                            BackgroundColor="#F34E00"
+                            Clicked="XFHauling_Click"/>
+                </Grid>
+                <Grid Grid.Row="1" BackgroundColor="Transparent" Padding="0,0,0,40">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                        <Label Text="If your camera doesn't work," FontSize="Small"
+                           VerticalOptions="Center" TextColor="#022648"/>
+                        <Label Text="click here " TextColor="#022648" FontSize="Small" FontAttributes="Bold">
+                               <Label.GestureRecognizers>
+                                      <TapGestureRecognizer x:Name="XFLblClickHere" NumberOfTapsRequired="1" Tapped="XFLblClickHere_Tapped"/> 
+                               </Label.GestureRecognizers>
+                         </Label>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2" BackgroundColor="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" BackgroundColor="Transparent" Padding="30,0,30,0">
+                    <Button VerticalOptions="Center" 
+                            HorizontalOptions="FillAndExpand" 
+                            Text="VIEW INVOICES"
+                            TextColor="White"
+                            BackgroundColor="#022648"
+                            Clicked="XFViewInvoices_Click"/>
+                </Grid>
+                <Grid Grid.Row="1" Padding="20,0,20,10" BackgroundColor="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" BackgroundColor="Transparent">
+                        
+                    </Grid>
+                    <Grid Grid.Column="1" BackgroundColor="Transparent" Padding="0,0,10,0">
+                        <Image VerticalOptions="Center" HorizontalOptions="EndAndExpand" WidthRequest="50" Source="info.png"/>
+                        <Image.GestureRecognizers>
+                                      <TapGestureRecognizer x:Name="XFFaqClickHere" NumberOfTapsRequired="1" Tapped="XFFaqClickHere_Tapped"/> 
+                        </Image.GestureRecognizers>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

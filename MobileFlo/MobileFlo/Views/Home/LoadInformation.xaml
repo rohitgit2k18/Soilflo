@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFlo.Views.Home.LoadInformation"
+             BackgroundImage="bg.png">
+    <ContentPage.Content>
+        <Grid x:Name="RootLayout" Margin="0,-1,0,0">
+             <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#00264F">
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
+                 </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Image Source="back_arrow.png" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image.GestureRecognizers>
+                                      <TapGestureRecognizer x:Name="XFBackbtn"
+                                                            NumberOfTapsRequired="1" 
+                                                            Tapped="XFBackbtn_Tapped"/> 
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Label Text="LOAD INFORMATION" HorizontalOptions="Center" VerticalOptions="Center" Margin="-80,0,0,0"
+                           HorizontalTextAlignment="Center" TextColor="#3E6C88" 
+                           FontAttributes="None"
+                           FontSize="Medium" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Frame HasShadow="True" CornerRadius="5" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="-1" WidthRequest="300" Padding="10" BackgroundColor="White">
+                    <Grid RowSpacing="10" BackgroundColor="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                           
+                        </Grid.RowDefinitions>
+                    
+                        <Grid Grid.Row="0" Padding="0" BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt5" Text="Ticket Number" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Black"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt6" Text="{Binding TicketID}" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Gray"/>
+                            </Grid>                           
+                        </Grid>
+                        <Grid Grid.Row="1" Padding="0" BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt7" Text="Source Site" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Black"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt8" Text="{Binding SourceSiteName}" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Gray"/>
+                            </Grid>                           
+                        </Grid>
+                        <Grid Grid.Row="2" Padding="0" BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt9" Text="Disposal Site" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Black"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt10" Text="{Binding DisposalSiteName}" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Gray"/>
+                            </Grid>                           
+                        </Grid>
+                        <Grid Grid.Row="3" Padding="0" BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt11" Text="City" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Black"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt12" Text="{Binding City}" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Gray"/>
+                            </Grid>                           
+                        </Grid>
+                        <Grid Grid.Row="4" Padding="0" BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt13" Text="Street" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Black"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt14" Text="{Binding Street}" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Gray"/>
+                            </Grid>                           
+                        </Grid>
+                        <Grid Grid.Row="5" Padding="0" BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt15" Text="Province" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Black"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt16" Text="{Binding Province}" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Gray"/>
+                            </Grid>                           
+                        </Grid>
+                        <Grid Grid.Row="6" Padding="0" BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt17" Text="Soil Type" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Black"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Padding="0" BackgroundColor="White">
+                                <Label x:Name="XFLabelTxt18" Text="{Binding SoilType}" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" TextColor="Gray"/>
+                            </Grid>                           
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

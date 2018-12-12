@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFlo.Views.Account.RegisterScreenFirst"
+             BackgroundImage="bg.png">
+    <ContentPage.Content>
+        <Grid x:Name="RootLayout" Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="Transparent">
+                <Image VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="200" Source="logo.png"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="5" BackgroundColor="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Padding="0,0,0,10">
+                    <StackLayout>
+                    <Label Text="REGISTER WITH YOUR MOBILE NUMBER"
+                           TextColor="#304C69" 
+                           FontSize="Small"
+                           HorizontalOptions="Center"                         
+                           HorizontalTextAlignment="Center"  />
+                    <Label Text="BEGIN HAULING WITH SOILFLO"
+                           TextColor="#304C69" 
+                           FontSize="Small"
+                           HorizontalOptions="Center"                         
+                           HorizontalTextAlignment="Center"  />
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Frame BorderColor="#A5A3A1" HeightRequest="50" Margin="0" Padding="5" CornerRadius="0">
+                        <Grid x:Name="GridEntryAndCode" HeightRequest="50">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <StackLayout Orientation="Horizontal" Padding="5,0,5,0">
+                                    <Label Text="+1" VerticalOptions="Center" TextColor="#5F5F5F"/>
+                                    <BoxView  
+                                            VerticalOptions="Fill"                                            
+                                            WidthRequest="1"
+                                        Margin="0,-5,0,-5"
+                                            Color="#A5A3A1"/>
+                                </StackLayout>
+                            </Grid>
+                            <Grid Grid.Column="1">
+                                <Entry x:Name="DriverMobile" Text="{Binding cellphone}" MaxLength="10" Placeholder="Enter your mobile number" Keyboard="Numeric" PlaceholderColor="#5F5F5F"/>
+                            </Grid>
+                        </Grid>
+                    </Frame>
+                </Grid>
+                <Grid Grid.Row="2" Padding="0,30,0,10">
+                    <Button VerticalOptions="Center" 
+                            HorizontalOptions="FillAndExpand" 
+                            CornerRadius="0" 
+                            Text="REGISTER"
+                            TextColor="White"
+                            BackgroundColor="#494949"
+                            BorderRadius="0"
+                            x:Name="XFBtnRegister"
+                            Clicked="XFBtnRegister_Clicked"/>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Label Text="You will receive a verification code via SMS to this number."
+                           VerticalOptions="Center" 
+                           TextColor="#304C69"
+                           HorizontalTextAlignment="Center"
+                           HorizontalOptions="Center">
+                        <!--<Label.GestureRecognizers>-->
+                            <!--<TapGestureRecognizer NumberOfTapsRequired="1"
+                                                  x:Name="XFLBLRegister" 
+                                                  Tapped="XFLBLRegister_Tapped"/>
+                        </Label.GestureRecognizers>-->
+                    </Label>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Label Text="Existing user? Click here to log in"
+                           VerticalOptions="Center" 
+                           TextColor="#304C69"
+                           HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                  x:Name="XFLBLLogin" 
+                                                  Tapped="XFLBLLogin_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

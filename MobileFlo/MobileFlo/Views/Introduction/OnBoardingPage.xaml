@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=CarouselView.FormsPlugin"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFlo.Views.Introduction.OnBoardingPage"
+             xmlns:local = "clr-namespace:MobileFlo.Views.Account"
+             BackgroundImage="bg.png">
+  <ContentPage>
+        <ContentPage.Content>
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                   <Image VerticalOptions="FillAndExpand" Aspect="AspectFit" HorizontalOptions="FillAndExpand" Source="onboarding_screen_1.png"/> 
+                </StackLayout>
+        </ContentPage.Content>
+  </ContentPage>
+  <ContentPage>
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                 <Image VerticalOptions="FillAndExpand" Aspect="AspectFit" HorizontalOptions="FillAndExpand" Source="onboarding_screen_2.png"/> 
+            </StackLayout>
+        </ContentPage.Content>
+  </ContentPage>
+  <ContentPage>
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                 <Image VerticalOptions="FillAndExpand" Aspect="AspectFit" HorizontalOptions="FillAndExpand" Source="onboarding_screen_3.png"/> 
+            </StackLayout>
+        </ContentPage.Content>
+  </ContentPage>
+  <local:LoginPage></local:LoginPage>
+</CarouselPage>

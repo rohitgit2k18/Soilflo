@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MobileFlo.Views.Home.AboutUsPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid x:Name="RootLayout" Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" RowSpacing="5" BackgroundColor="Transparent">
+             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+             </Grid.RowDefinitions> 
+            <Grid Grid.Row="0" RowSpacing="1" BackgroundColor="Transparent">    
+                <Label Text="About Synertrack" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="1" BackgroundColor="Transparent">
+                 <Label Text="SoilFLO was developed by Synertrack Inc. We have developed products in the soil industry for over 10 years." HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+                
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="5" BackgroundColor="Transparent">
+               <Label Text="For questions and support, please email support@soilflo.com" HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/> 
+            </Grid>
+            <Grid Grid.Row="2" RowSpacing="5" BackgroundColor="Transparent">
+             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+             </Grid.RowDefinitions> 
+            <Grid Grid.Row="0" RowSpacing="1" BackgroundColor="Transparent">    
+                <Label Text="About SoilFLO Hauler App" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="1" BackgroundColor="Transparent">
+                 <Label Text="SoilFLO Hauler App ensures that you receive accurate and timely payment for your hauling services." HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+                
+            </Grid>
+            <Grid Grid.Row="3" RowSpacing="5" BackgroundColor="Transparent">
+                <Label Text="The application replaces paper tickets. By using the phone's GPS, the application counts the number of trips that have been completed and provides reports to the site foreman and to your dispatcher." HorizontalOptions="StartAndExpand" TextColor="Black" FontSize="Small"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

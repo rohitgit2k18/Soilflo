@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFlo.Views.Home.PrivacyPolicyAgreement"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid x:Name="RootLayout" Margin="30">
+             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+           <Grid Grid.Row="0" RowSpacing="5" BackgroundColor="Transparent">
+             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+             </Grid.RowDefinitions> 
+            <Grid Grid.Row="0" RowSpacing="2" BackgroundColor="Transparent">    
+                <Label Text="Please follow the links below if you wish to view our legal documents:" HorizontalOptions="StartAndExpand" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            </Grid>
+            <Grid Grid.Row="1" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="Privacy Policy" HorizontalOptions="StartAndExpand" TextColor="#00264F" FontSize="Small"/>
+                 <Label.GestureRecognizers>
+                       <TapGestureRecognizer x:Name="XFPrivacyPolicyPage" NumberOfTapsRequired="1"  Tapped="PrivacyPolicyTapLink_Tapped"/> 
+                 </Label.GestureRecognizers>
+            </Grid>
+            <Grid Grid.Row="2" RowSpacing="2" BackgroundColor="Transparent">
+                 <Label Text="Terms And Conditions" HorizontalOptions="StartAndExpand" TextColor="#00264F" FontSize="Small"/>
+                   <Label.GestureRecognizers>
+                       <TapGestureRecognizer x:Name="XFTermsConditionPage"  NumberOfTapsRequired="1" Tapped="TermsConditionTapLink_Tapped"/> 
+                 </Label.GestureRecognizers>
+            </Grid>
+         </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

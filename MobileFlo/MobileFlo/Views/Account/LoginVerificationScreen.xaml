@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFlo.Views.Account.LoginVerificationScreen">
+    <ContentPage.Content>
+        <Grid x:Name="RootLayout" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Frame HasShadow="True" CornerRadius="5" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="-1" Padding="10" Margin="0" BackgroundColor="White">
+                    <Grid RowSpacing="1" BackgroundColor="LightGray">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" Padding="5" BackgroundColor="White">
+                            <Label x:Name="XFLabelTxt1" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" TextColor="Black"/>
+                        </Grid>
+                        <Grid Grid.Row="1" BackgroundColor="White" RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Padding="20" BackgroundColor="White">
+                                <Entry x:Name="VerificationCode" Text="{Binding code}"  Placeholder="234567" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" TextColor="#5F5F5F"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Padding="20,10,20,10" BackgroundColor="White">
+                                <Button VerticalOptions="End" 
+                            HorizontalOptions="FillAndExpand" 
+                            CornerRadius="0" 
+                            Text="CONTINUE"
+                            TextColor="White"
+                            BackgroundColor="#032548"
+                            BorderRadius="0"
+                            x:Name="XFBtnContinue"
+                            Clicked="XFBtnContinue_Clicked"
+                            />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="2" Padding="0,0,0,0">
+                <Button VerticalOptions="Center" 
+                            HorizontalOptions="FillAndExpand" 
+                            CornerRadius="0" 
+                            Text="RESEND VERIFICATION CODE"
+                            TextColor="White"
+                            BackgroundColor="#494949"
+                            BorderRadius="0"
+                            x:Name="XFBtnResend"
+                            Clicked="XFBtnResend_Clicked"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
