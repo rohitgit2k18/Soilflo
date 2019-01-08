@@ -53,7 +53,7 @@ namespace MobileFlo.Views.Account
                         codeVerificationRequest.cellphone = Settings.PhoneNo;
                         codeVerificationResponse = await _apiServices.ValidateCodeAsync(new Get_API_Url().CommonBaseApi(_baseUrl), false, new HeaderModel(), codeVerificationRequest);
                         var result = codeVerificationResponse;
-                        if (result != null)
+                        if (result.status == "Success")
                         {
                             //await DisplayAlert("Message", "The code is valid", "OK");
                             //await DisplayAlert("Message", "The driver has been successfully logged in", "OK");
@@ -65,7 +65,7 @@ namespace MobileFlo.Views.Account
                         }
                         else
                         {
-                            await DisplayAlert("Message", "Server Error", "OK");
+                            await DisplayAlert("Message", "Verification Code Error", "OK");
                         }
                     }
                     catch (Exception ex)

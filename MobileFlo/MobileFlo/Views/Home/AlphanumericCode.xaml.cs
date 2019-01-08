@@ -79,6 +79,7 @@ namespace MobileFlo.Views.Home
                         }
                         else
                         {
+                            await DisplayAlert("Alert", "Daily Truck List is not found", "OK");
                             await App.NavigationPage.Navigation.PushAsync(new FailureScreen());
                             //await DisplayAlert("Error", "Oops! An error occurred while assigning a driver to a Daily Truck List", "OK");
                         }

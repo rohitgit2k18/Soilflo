@@ -126,7 +126,7 @@ namespace MobileFlo.Views.Home
                                                       string.Format("{0}:{1}", "jigadmin", "Gr8ApI#"))));
 
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                response = client.GetAsync("http://api.staging.soilflo.com/hauler/GetStatus/" + getStatusRequest.scancode).Result;
+                response = client.GetAsync("https://api.soilflo.com/hauler/GetStatus/" + getStatusRequest.scancode).Result;
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -263,7 +263,7 @@ namespace MobileFlo.Views.Home
                                                       string.Format("{0}:{1}", "jigadmin", "Gr8ApI#"))));
 
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                response = client.GetAsync("http://api.staging.soilflo.com/hauler/GetDelivery/" + Settings.QRCode).Result;
+                response = client.GetAsync("https://api.soilflo.com/hauler/GetDelivery/" + Settings.QRCode).Result;
 
                 if (response.IsSuccessStatusCode)
                 {

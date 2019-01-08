@@ -20,13 +20,13 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>MobileFlo</string>
+	<string>SoilFLO</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.vinove.MobileFlo</string>
+	<string>com.soilflo</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.4</string>
 	<key>CFBundleName</key>
-	<string>MobileFlo</string>
+	<string>SoilFLO</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSAppTransportSecurity</key>
@@ -37,14 +37,22 @@
 	<key>XSLaunchImageAssets</key>
 	<string>Assets.xcassets/LaunchImage.launchimage</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This app needs access to location when in the background</string>
+	<string>This app needs the permission to access the location when in the background and send your device location detail to the server.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This app needs access to location when open and in the background</string>
+	<string> This App needs the permission to access location when in use and send your device location detail to the server.</string>
 	<key>NSCalendarsUsageDescription</key>
-	<string>Needs Calendar Permission</string>
+	<string>Needs Calendar Permission to use calender details</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1</string>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>location</string>
+		<string>fetch</string>
 	</array>
+	<key>Privacy - Camera Usage Description  </key>
+	<string>This app needs  the permission to access the device camera to scan the QR code and that code is used to get the hauling details within the App.  </string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app needs access to gallery permission to upload photo for profile.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs  the permission to access the device camera to scan the QR code and that code is used to get the hauling details within the App.  </string>
 </dict>
 </plist>

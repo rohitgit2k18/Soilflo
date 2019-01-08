@@ -117,12 +117,15 @@ namespace MobileFlo.Views.Home
         {
             try { 
                  var scan = new ZXingScannerPage();
-                 await Navigation.PushAsync(scan);
+                 NavigationPage.SetHasNavigationBar(scan,true);
+                 
                  scan.OnScanResult += (result) =>
                  {
-                    Device.BeginInvokeOnMainThread(async () =>
+                    scan.IsScanning = false;
+
+                    Device.BeginInvokeOnMainThread(() =>
                     {
-                    await Navigation.PopAsync();
+                        Navigation.PopAsync();
                         Settings.QRCode = result.Text;
                         if (Settings.QRCode != null)
                         {
@@ -132,6 +135,7 @@ namespace MobileFlo.Views.Home
                         }
                     });
                  };
+                await App.NavigationPage.Navigation.PushAsync(scan);
                              
             }
             catch(Exception ex)

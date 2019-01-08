@@ -17,9 +17,9 @@ using Xamarin.Forms.Xaml;
 
 namespace MobileFlo.Views.Account
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RegisterScreenFirst : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class RegisterScreenFirst : ContentPage
+    {
         #region variable declaration
         private RegisterMobileResponseModel registerMobileResponse;
         private RegisterMobileRequestModel registerMobileRequest;
@@ -28,9 +28,9 @@ namespace MobileFlo.Views.Account
         private RestApi _apiServices;
         private HeaderModel _objHeaderModel;
         #endregion
-        public RegisterScreenFirst ()
-		{
-			InitializeComponent ();
+        public RegisterScreenFirst()
+        {
+            InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             registerMobileRequest = new RegisterMobileRequestModel();
             registerMobileResponse = new RegisterMobileResponseModel();
@@ -39,7 +39,7 @@ namespace MobileFlo.Views.Account
             _baseUrl = Domain.Url + Domain.CreateDriverApiConstant;
             BindingContext = registerMobileRequest;
         }
-        private async void XFLBLLogin_Tapped(object sender,TappedEventArgs e)
+        private async void XFLBLLogin_Tapped(object sender, TappedEventArgs e)
         {
             await App.NavigationPage.Navigation.PushAsync(new LoginPage());
         }
@@ -52,40 +52,42 @@ namespace MobileFlo.Views.Account
             //}
             //else
             //{
-                if(string.IsNullOrEmpty(registerMobileRequest.cellphone))
+            if (string.IsNullOrEmpty(registerMobileRequest.cellphone))
+            {
+                await DisplayAlert("Alert", "Please insert mobile number", "OK");
+            }
+            else
+            {
+                try
                 {
-                    await DisplayAlert("Alert", "Please insert mobile number", "OK");
-                }
-                else
-                {
-                    try
+                    _objHeaderModel.TokenCode = Settings.TokenCode;
+                    Settings.PhoneNo = registerMobileRequest.cellphone;
+                    registerMobileResponse = await _apiServices.MobileNumberAsync(new Get_API_Url().CreateMobileNumberApi(_baseUrl), true, _objHeaderModel, registerMobileRequest);
+                    var result = registerMobileResponse;
+                    if (result.status == "Success")
                     {
-                        _objHeaderModel.TokenCode = Settings.TokenCode;
-                        Settings.PhoneNo = registerMobileRequest.cellphone;
-                        registerMobileResponse = await _apiServices.MobileNumberAsync(new Get_API_Url().CreateMobileNumberApi(_baseUrl), true, _objHeaderModel, registerMobileRequest);
-                        var result = registerMobileResponse;
-                        if (result.status == "Success")
-                        {
-                            await DisplayAlert("Message", "The driver has been successfully created", "OK");
-                            await App.NavigationPage.Navigation.PushAsync(new RegisterScreenSecond());
-                        }
-                        if(result.status == "Duplicate")
-                        {
-                            await DisplayAlert("Message", "User already exists, please login", "OK");
+                        StaticHelper.CellPhone = registerMobileRequest.cellphone;
+
+                        //await DisplayAlert("Message", "The driver has been successfully created", "OK");
+                        await App.NavigationPage.Navigation.PushAsync(new RegisterScreenSecond());
+                    }
+                    if (result.status == "Duplicate")
+                    {
+                        await DisplayAlert("Message", "User already exists, please login", "OK");
                         await App.NavigationPage.Navigation.PushAsync(new LoginPage());
-                        }
-                        //else
-                        //{
-                        //    await DisplayAlert("Message", "Oops! An error occurred while creating a driver", "OK");
-                        //}
                     }
-                    catch(Exception ex)
-                    {
-                        await DisplayAlert("Alert", "You are not authorized", "OK");
-                    }
-                    
+                    //else
+                    //{
+                    //    await DisplayAlert("Message", "Oops! An error occurred while creating a driver", "OK");
+                    //}
                 }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Alert", "You are not authorized", "OK");
+                }
+
             }
         }
     }
+}
 //}

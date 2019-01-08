@@ -13,7 +13,7 @@ namespace MobileFlo.Models
           
             get
             {
-                 return "http://api.staging.soilflo.com/hauler/";
+                 return "https://api.soilflo.com/hauler/";
                
             }
         }

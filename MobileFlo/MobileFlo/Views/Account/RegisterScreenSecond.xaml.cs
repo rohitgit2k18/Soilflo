@@ -49,7 +49,7 @@ namespace MobileFlo.Views.Account
             {
                 if (string.IsNullOrEmpty(codeVerificationRequest.code))
                 {
-                    await DisplayAlert("Alert", "Please click on resend button", "OK");
+                    await DisplayAlert("Alert", "Please enter Verification Code.", "OK");
                 }
                 else
                 {
@@ -58,10 +58,14 @@ namespace MobileFlo.Views.Account
                         codeVerificationRequest.cellphone = StaticHelper.CellPhone;
                         codeVerificationResponse = await _apiServices.ValidateCodeAsync(new Get_API_Url().CommonBaseApi(_baseUrl), false, new HeaderModel(), codeVerificationRequest);
                         var result = codeVerificationResponse;
-                        if (result != null)
+                        if (result.status == "Success")
                         {
-                            await DisplayAlert("Message", "The code is valid", "OK");
+                            await DisplayAlert("Message", "The driver has been successfully created", "OK");
                             await App.NavigationPage.Navigation.PushAsync(new RegisterScreenThird());
+                        }
+                        else if(result.status=="Invalid")
+                        {
+                            await DisplayAlert("Message", "Code is not valid.", "OK");
                         }
                         else
                         {

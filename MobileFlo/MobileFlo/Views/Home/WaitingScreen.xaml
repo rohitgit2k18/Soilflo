@@ -5,7 +5,6 @@
              BackgroundImage="bg.png">
      <ContentPage.Content>
         <Grid x:Name="Rootlayout" RowSpacing="0">
-            
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.10*"/>
                 <RowDefinition Height="0.20*"/>
