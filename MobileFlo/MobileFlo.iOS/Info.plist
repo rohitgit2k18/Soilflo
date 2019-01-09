@@ -18,7 +18,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>8.0</string>
+	<string>12.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>SoilFLO</string>
 	<key>CFBundleIdentifier</key>
@@ -47,6 +47,7 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
+		<string>location</string>
 	</array>
 	<key>Privacy - Camera Usage Description  </key>
 	<string>This app needs  the permission to access the device camera to scan the QR code and that code is used to get the hauling details within the App.  </string>
@@ -54,5 +55,7 @@
 	<string>This app needs access to gallery permission to upload photo for profile.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app needs  the permission to access the device camera to scan the QR code and that code is used to get the hauling details within the App.  </string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app needs the permission to access the location when open and in the background and send your device location detail to the server.</string>
 </dict>
 </plist>
