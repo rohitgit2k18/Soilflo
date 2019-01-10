@@ -61,13 +61,13 @@ namespace MobileFlo.Views.Account
                 try
                 {
                     _objHeaderModel.TokenCode = Settings.TokenCode;
-                    Settings.PhoneNo = registerMobileRequest.cellphone;
+                    
                     registerMobileResponse = await _apiServices.MobileNumberAsync(new Get_API_Url().CreateMobileNumberApi(_baseUrl), true, _objHeaderModel, registerMobileRequest);
                     var result = registerMobileResponse;
                     if (result.status == "Success")
                     {
                         StaticHelper.CellPhone = registerMobileRequest.cellphone;
-
+                        Settings.PhoneNo = registerMobileRequest.cellphone;
                         //await DisplayAlert("Message", "The driver has been successfully created", "OK");
                         await App.NavigationPage.Navigation.PushAsync(new RegisterScreenSecond());
                     }
